@@ -23,12 +23,16 @@ describe "grams#create action" do
 		     expect(response).to redirect_to root_path
 
 		     gram = Gram.last
-		     expect(gram.message).to eq("Hello")
+		     expect(gram.message).to eq("Hello!")
+		    end 
+		end
+	end	
+end		    
 
-    end
+    
 
-  end
-end
+  
+
 
 
  
