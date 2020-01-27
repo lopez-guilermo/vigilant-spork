@@ -1,8 +1,10 @@
 Rails.application.configure do
    config.action_mailer.default_url_options = { host: 'grammable-guillermo-lopez.herokuapp.com' }
+ end
+ 
 
   # a bunch of other stuff .....
-end 
+ 
 
 
 
@@ -97,8 +99,8 @@ end
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
-  end
-
-  # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
+  end  
+  # Do not dump schema after migrations
+   config.active_record.dump_schema_after_migration = false
+  # end
 end
