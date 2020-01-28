@@ -1,6 +1,6 @@
 Rails.application.configure do
    config.action_mailer.default_url_options = { host: 'grammable-guillermo-lopez.herokuapp.com' }
- end
+ 
  
 
   # a bunch of other stuff .....
