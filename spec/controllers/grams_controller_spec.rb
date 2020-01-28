@@ -122,7 +122,7 @@ RSpec.describe GramsController, type: :controller do
     
 	  it "should successfully show the edit form if the gram is found" do
 	  	gram = FactoryBot.create(:gram)
-	  	sign_in user gram.user
+	  	sign_in  gram.user
 
 	  	get :edit, params: { id: gram.id } 
 	  	expect(response).to have_http_status(:success)
