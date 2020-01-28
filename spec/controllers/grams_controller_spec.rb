@@ -9,6 +9,7 @@ RSpec.describe GramsController, type: :controller do
     end
   end
 
+
 	describe "grams#destroy action" do
 		it "shouldn't allow users who didn't create the gram to destroy it" do
 		 	gram = FactoryBot.create(:gram)
@@ -121,7 +122,7 @@ RSpec.describe GramsController, type: :controller do
     
 	  it "should successfully show the edit form if the gram is found" do
 	  	gram = FactoryBot.create(:gram)
-	  	sign_user gram.user
+	  	sign_in user gram.user
 
 	  	get :edit, params: { id: gram.id } 
 	  	expect(response).to have_http_status(:success)
@@ -204,8 +205,10 @@ RSpec.describe GramsController, type: :controller do
      expect(response).to have_http_status(:unprocessable_entity)
      expect(gram_count).to eq Gram.count
     end
+  end
 end
-end
+
+
 
 
     
